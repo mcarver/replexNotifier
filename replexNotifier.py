@@ -49,11 +49,11 @@ def push(session):
 	else:
 		#tv
 		if session["playerState"] == "playing":
-			pushText = "%s started %s %s - %s on %s" % (
-				session["userTitle"], session["playerState"], session["videoGrandparentTitle"], session["videoTitle"], session["playerTitle"])
+			pushText = "%s started %s %s - %s - %s on %s" % (
+				session["userTitle"], session["playerState"], session["videoGrandparentTitle"], "S"+session["videoParentIndex"].zfill(2)+"E"+session["videoIndex"].zfill(2), session["videoTitle"], session["playerTitle"])
 		else:
-			pushText = "%s %s %s - %s on %s" % (
-				session["userTitle"], session["playerState"], session["videoGrandparentTitle"], session["videoTitle"], session["playerTitle"])
+			pushText = "%s %s %s - %s - %s - on %s" % (
+				session["userTitle"], session["playerState"], session["videoGrandparentTitle"], "S"+session["videoParentIndex"].zfill(2)+"E"+session["videoIndex"].zfill(2), session["videoTitle"], session["playerTitle"])
 
 	push = {}
 	push['type'] = "note"
@@ -95,6 +95,8 @@ while True:
 		#values
 		session["videoGrandparentTitle"] = video.get("grandparentTitle")
 		session["videoTitle"] = video.get("title")
+		session["videoIndex"] = video.get("index")
+		session["videoParentIndex"] = video.get("parentIndex")
 		session["userTitle"] = user.get("title") if len(user) > 0 else "Unknown"
 		session["playerState"] = player.get("state")
 		session["playerTitle"] = player.get("title")
