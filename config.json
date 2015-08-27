@@ -1,0 +1,8 @@
+{
+	"serverIp": "<Plex Server IP>",
+	"serverPort": 32400,
+	"pushbulletAccessToken": "<Pushbullet Access Token>",
+	"checkInterval": 5,
+	"notifyOnStart": true,
+	"notifyOnStop": true
+}
