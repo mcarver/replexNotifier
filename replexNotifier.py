@@ -2,7 +2,7 @@ import json, time, urllib2
 from xml.etree import ElementTree
 
 #misc
-version = "v0.1"
+version = "v0.2"
 L = None #last loop
 
 print "\nReplex Notifier "+version+"\n"
