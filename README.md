@@ -26,4 +26,4 @@ Run the script on your Plex server (preferred) or another server residing on you
 
 **Nix:** `python replexNotifier.py` or run it in the background, `python replexNotifier.py &`
 
-**Windows:** Download the `replexNotifier_v0.1_win32.zip` Windows executable from the releases page and double-click to execute.
+**Windows:** [Download the Windows executable](https://github.com/mcarver/replexNotifier/releases) and double-click to execute.
