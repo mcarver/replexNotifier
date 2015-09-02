@@ -97,7 +97,7 @@ while True:
 		session["videoTitle"] = video.get("title")
 		session["videoIndex"] = video.get("index")
 		session["videoParentIndex"] = video.get("parentIndex")
-		session["userTitle"] = user.get("title") if len(user) > 0 else "Unknown"
+		session["userTitle"] = user.get("title")
 		session["playerState"] = player.get("state")
 		session["playerTitle"] = player.get("title")
 
